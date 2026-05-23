@@ -22,7 +22,7 @@ A modern agricultural business website for showcasing and selling rice, beans, c
 
  Contact
 
-Muyes Enterprises
+Muyes001 Enterprises
 Kenya
 
 WhatsApp: +254 794542227
