@@ -12,21 +12,15 @@ A modern agricultural business website for showcasing and selling rice, beans, c
 * Professional homepage
 * Clean business branding
 
-
  Products
 * Quality Rice (Mwea Pishori)
 * Tea Leaves
 * Milk
 * Bulk Cereal Supply
 
-
  Contact
-
 Muyes001 Enterprises
-Kenya
-
 WhatsApp: +254 794542227
 
  License
-
 © 2026 Muyes Enterprises. All rights reserved.
