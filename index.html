@@ -52,6 +52,73 @@
       font-size:20px;
       margin-bottom:30px;
     }
+    <section style="padding:40px 20px; background:#fff; overflow:hidden;">
+
+  <h2 style="text-align:center; font-size:40px; color:#0d5c2f; margin-bottom:30px;">
+    Our Products
+  </h2>
+
+  <div class="slider">
+
+    <div class="slides">
+      <img src="WhatsApp Image 2026-05-19 at 2.32.45 PM.jpeg">
+      <img src="WhatsApp Image 2026-05-19 at 2.32.47 PM.jpeg">
+      <img src="WhatsApp Image 2026-05-19 at 2.32.49 PM.jpeg">
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+
+.slider{
+  width:100%;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.slides{
+  display:flex;
+  width:300%;
+  animation:slide 12s infinite;
+}
+
+.slides img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+@keyframes slide{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  30%{
+    transform:translateX(0);
+  }
+
+  35%{
+    transform:translateX(-100%);
+  }
+
+  65%{
+    transform:translateX(-100%);
+  }
+
+  70%{
+    transform:translateX(-200%);
+  }
+
+  100%{
+    transform:translateX(-200%);
+  }
+
+}
+
+</style>
 
     .btn{
       background:#ffb703;
