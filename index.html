@@ -165,8 +165,64 @@ Rice, Beans, Maize, Milk and Tea Leaves Available.
 Countrywide Delivery from Nairobi.
 </p>
 
-<a class="btn" href="https://wa.me/254794542227">
-Order on WhatsApp
+<section class="section">
+
+<h2 class="section-title">Place Your Order</h2>
+
+<div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+
+<input id="customerName" type="text" placeholder="Your Name"
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<input id="customerPhone" type="text" placeholder="Your Phone Number"
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<select id="product"
+style="width:100%;padding:12px;margin-bottom:15px;">
+<option>Pishori Rice</option>
+<option>Beans</option>
+<option>Maize</option>
+<option>Milk</option>
+<option>Tea Leaves</option>
+</select>
+
+<input id="quantity" type="number" placeholder="Quantity"
+style="width:100%;padding:12px;margin-bottom:15px;">
+
+<button onclick="sendOrder()"
+style="background:#25D366;color:white;border:none;padding:15px 25px;border-radius:8px;cursor:pointer;font-size:16px;">
+Send Order on WhatsApp
+</button>
+
+</div>
+
+</section>
+
+<script>
+function sendOrder() {
+
+const name = document.getElementById('customerName').value;
+const phone = document.getElementById('customerPhone').value;
+const product = document.getElementById('product').value;
+const quantity = document.getElementById('quantity').value;
+
+const message =
+`NEW ORDER
+
+Name: ${name}
+Phone: ${phone}
+Product: ${product}
+Quantity: ${quantity}
+
+Please confirm availability and delivery details.`;
+
+window.open(
+`https://wa.me/254794542227?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+}
+</script>
 </a>
 </section>
 
