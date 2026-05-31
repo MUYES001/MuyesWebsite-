@@ -1,383 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muyes001 Enterprises</title>
-  <img src="Logo.jpeg" width="120">
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
-
-    body{
-      background:#f5f5f5;
-      color:#222;
-    }
-
-    header{
-      background:#0d5c2f;
-      color:white;
-      padding:20px;
-      text-align:center;
-    }
-
-    nav{
-      margin-top:10px;
-    }
-
-    nav a{
-      color:white;
-      margin:0 10px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .hero{
-      background:#0d5c2f;
-      color:white;
-      padding:100px 20px;
-      text-align:center;
-    }
-
-    .hero h1{
-      font-size:48px;
-      margin-bottom:20px;
-    }
-
-    .hero p{
-      font-size:20px;
-      margin-bottom:30px;
-    }
-    <section style="padding:40px 20px; background:#fff; overflow:hidden;">
-
-  <h2 style="text-align:center; font-size:40px; color:#0d5c2f; margin-bottom:30px;">
-    Our Products
-  </h2>
-
-  <div class="slider">
-
-    <div class="slides">
-      <img src="WhatsApp Image 2026-05-19 at 2.32.45 PM.jpeg">
-      <img src="WhatsApp Image 2026-05-19 at 2.32.47 PM.jpeg">
-      <img src="WhatsApp Image 2026-05-19 at 2.32.49 PM.jpeg">
-    </div>
-
-  </div>
-
-</section>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muyes001 Enterprises</title>
 
 <style>
-
-.slider{
-  width:100%;
-  overflow:hidden;
-  border-radius:15px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-.slides{
-  display:flex;
-  width:300%;
-  animation:slide 12s infinite;
+body{
+background:#f5f5f5;
+color:#222;
 }
 
-.slides img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
-}
-
-@keyframes slide{
-
-  0%{
-    transform:translateX(0);
-  }
-
-  30%{
-    transform:translateX(0);
-  }
-
-  35%{
-    transform:translateX(-100%);
-  }
-
-  65%{
-    transform:translateX(-100%);
-  }
-
-  70%{
-    transform:translateX(-200%);
-  }
-
-  100%{
-    transform:translateX(-200%);
-  }
-
-}
-
-</style>
- 
-</script>
-   <script>
-
-function toggleDarkMode(){
-  document.body.classList.toggle('dark-mode');
-}
-
-  body{
-  animation:fadeIn 1.5s ease;
-<button onclick="toggleDarkMode()" 
-style="
-position:fixed;
-top:20px;
-right:20px;
-padding:12px 18px;
-border:none;
-border-radius:10px;
+header{
 background:#0d5c2f;
 color:white;
-cursor:pointer;
-z-index:999;
-">
-🌙 Dark Mode
-  }
-</button>
-
-@keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+padding:15px;
+text-align:center;
 }
 
-button,
-a{
-  transition:0.3s ease;
+header img{
+width:120px;
+border-radius:10px;
+margin-bottom:10px;
 }
 
-button:hover,
-a:hover{
-  transform:scale(1.05);
+nav{
+margin-top:15px;
 }
 
-.dark-mode{
-  background:#111;
-  color:white;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
 }
 
-    .btn{
-      background:#ffb703;
-      color:black;
-      padding:15px 30px;
-      text-decoration:none;
-      border-radius:8px;
-      font-weight:bold;
-    }
+.hero{
+background:#0d5c2f;
+color:white;
+text-align:center;
+padding:80px 20px;
+}
 
-    .section{
-      max-width:1200px;
-      margin:auto;
-      padding:60px 20px;
-    }
+.hero h1{
+font-size:50px;
+margin-bottom:15px;
+}
 
-    .section h2{
-      text-align:center;
-      margin-bottom:40px;
-      color:#0d5c2f;
-      font-size:36px;
-    }
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
+.btn{
+background:#ffb703;
+color:black;
+padding:15px 25px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
 
-    .card{
-      background:white;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+.section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-    .card img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-    }
+.section-title{
+text-align:center;
+font-size:40px;
+color:#0d5c2f;
+margin-bottom:40px;
+}
 
-    .card-content{
-      padding:20px;
-    }
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-    footer{
-      background:#0d5c2f;
-      color:white;
-      text-align:center;
-      padding:20px;
-    }
-  </style>
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+.card-content h3{
+margin-bottom:10px;
+color:#0d5c2f;
+}
+
+.mpesa{
+background:#e8f5e9;
+text-align:center;
+padding:50px 20px;
+}
+
+.contact{
+background:#0d5c2f;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+.order-btn{
+display:inline-block;
+margin-top:15px;
+background:#25D366;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Muyes001 Enterprises</h1>
+<img src="Logo.jpeg" alt="Muyes001 Enterprises Logo">
 
-  <nav>
-<p>Phone: 0794542227</p>
-<p>Location: Nairobi, Kenya</p>
-<p>Countrywide Delivery Available</p>
-  </nav>
+<h1>Muyes001 Enterprises</h1>
+
+<nav>
+<a href="#products">Products</a>
+<a href="#payment">Payment</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <h1>Fresh Cereals & Farm Produce</h1>
-  <p>Trusted supplier of rice, beans and cereals in Kenya.</p>
+<h1>Quality Farm Produce</h1>
 
-  <a href="https://wa.me/254794542227" class="btn">
-    Order on WhatsApp
-  </a>
+<p>
+Rice, Beans, Maize, Milk and Tea Leaves Available.
+Countrywide Delivery from Nairobi.
+</p>
+
+<a class="btn" href="https://wa.me/254794542227">
+Order on WhatsApp
+</a>
 </section>
 
-<section class="section">
-  <h2>Pishori Rice — Ksh 200/kg
-Beans — Ksh 180/kg</h2>
+<section class="section" id="products">
 
-  <div class="products">
+<h2 class="section-title">Our Products</h2>
 
-        <div class="card">
-      <img src="Rice.jpeg">
-      <div class="card-content">
-        <h3>Quality Rice</h3>
-        <p>Clean and affordable rice delivered across Kenya.</p>
-      </div>
-    </div>
+<div class="products">
 
-    <div class="card">
-      <img src="Beans.jpeg">
-      <div class="card-content">
-        <h3>Premium Beans</h3>
-        <p>Quality beans supplied for retail and wholesale.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="Rice.jpeg">
+<div class="card-content">
+<h3>Pishori Rice</h3>
+<p>KSh 200 per KG</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="Tea Leaves.jpeg">
-      <div class="card-content">
-        <h3>Quality Tea Leaves</h3>
-        <p>Clean and affordable Tea Leaves delivered across Kenya.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="Beans.jpeg">
+<div class="card-content">
+<h3>Beans</h3>
+<p>KSh 180 per KG</p>
+</div>
+</div>
 
-        <div class="card">
-      <img src="Milk.jpeg">
-      <div class="card-content">
-        <h3>Quality Rice</h3>
-        <p>Clean and affordable Milk delivered across Kenya.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="Maize.jpeg">
+<div class="card-content">
+<h3>Maize</h3>
+<p>Available on Request</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="Beans.jpeg">
-      <div class="card-content">
-        <h3>Bulk Supply</h3>
-        <p>Reliable cereal supply for shops and businesses.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="Milk.jpeg">
+<div class="card-content">
+<h3>Milk</h3>
+<p>Fresh Supply Available</p>
+</div>
+</div>
 
-    <section style="padding:60px 20px; background:#f4f4f4; text-align:center;">
-  <h2 style="font-size:40px; color:#0d5c2f; margin-bottom:20px;">
-    Pay With M-Pesa
-  </h2>
+<div class="card">
+<img src="Tea Leaves.jpeg">
+<div class="card-content">
+<h3>Tea Leaves</h3>
+<p>Quality Tea Products</p>
+</div>
+</div>
 
-  <p style="font-size:22px; margin-bottom:10px;">
-    Paybill Number: <strong>765244</strong>
-  </p>
-
-  <p style="font-size:22px; margin-bottom:10px;">
-    Account Number: <strong>277352</strong>
-  </p>
-
-  <p style="font-size:20px; color:#444;">
-    Fast & Secure Payments
-  </p>
-</section>
-
-    <section style="padding:60px 20px; background:white; text-align:center;">
-  <h2 style="font-size:40px; color:#0d5c2f; margin-bottom:30px;">
-    Place Your Order
-  </h2>
-
-  <form style="max-width:500px; margin:auto;">
-    
-    <input 
-      type="text" 
-      placeholder="Your Name"
-      style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"
-    >
-
-    <input 
-      type="tel" 
-      placeholder="Phone Number"
-      style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"
-    >
-
-    <select 
-      style="width:100%; padding:15px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"
-    >
-      <option>Pishori Rice - Ksh 200/kg</option>
-      <option>Beans - Ksh 180/kg</option>
-    </select>
-
-    <input 
-      type="number" 
-      placeholder="Quantity (KG)"
-      style="width:100%; padding:15px; margin-bottom:20px; border-radius:8px; border:1px solid #ccc;"
-    >
-
-    <a 
-      href="https://wa.me/254794542227"
-      style="display:inline-block; background:#0d5c2f; color:white; padding:15px 30px; border-radius:8px; text-decoration:none; font-size:18px;"
-    >
-      Submit Order
-    </a>
-
-  </form>
-</section>
-
-  <section style="padding:60px 20px; background:#f4f4f4; text-align:center;">
-
-  <h2 style="font-size:40px; color:#0d5c2f; margin-bottom:30px;">
-    Find Us
-  </h2>
-
-  <p style="font-size:20px; margin-bottom:20px;">
-    Nairobi, Kenya — Countrywide Delivery
-  </p>
-
-  <iframe 
-    src="https://maps.google.com/maps?q=Nairobi%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="400"
-    style="border:0; border-radius:15px;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
+</div>
 
 </section>
-  </div>
+
+<section class="mpesa" id="payment">
+
+<h2 class="section-title">M-Pesa Payment</h2>
+
+<p><strong>Paybill:</strong> 765244</p>
+<br>
+<p><strong>Account Number:</strong> 277352</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>Phone: 0794542227</p>
+<p>Location: Nairobi, Kenya</p>
+<p>Countrywide Delivery Available</p>
+
+<a class="order-btn" href="https://wa.me/254794542227">
+Chat on WhatsApp
+</a>
+
 </section>
 
 <footer>
-  <p>© 2026 Muyes001 Enterprises. All Rights Reserved.</p>
+© 2026 Muyes001 Enterprises. All Rights Reserved.
 </footer>
 
 </body>
