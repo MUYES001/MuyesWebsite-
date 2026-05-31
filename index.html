@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,50 +13,30 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
-<a href="https://wa.me/254794542227"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-z-index:9999;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-">
-WhatsApp Us
-</a>
+
 body{
 background:#f5f5f5;
 color:#222;
+line-height:1.6;
 }
-<section>
-<img src="logoflyer.jpeg" alt="Muyes001 Enterprises Logo">
+
+header{
 background:#0d5c2f;
 color:white;
-padding:15px;
 text-align:center;
+padding:20px;
 }
+
 header img{
-width:120px;
-border-radius:10px;
+width:140px;
+border-radius:12px;
 margin-bottom:10px;
-}
-<section>
-  <img src="Rice.jpeg" alt="Fresh Farm Produce"
-       style="width:100%; height:450px; object-fit:cover;">
-</section>
-nav{
-margin-top:15px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
+margin:0 10px;
 font-weight:bold;
 }
 
@@ -74,24 +55,14 @@ margin-bottom:15px;
 .hero p{
 font-size:20px;
 margin-bottom:25px;
-
 }
- <section class="section">
-  <h2 class="section-title">Our Promotional Flyer</h2>
-
-  <div style="text-align:center;">
-    <img src="flyer.png"
-         alt="Muyes001 Enterprises Flyer"
-         style="max-width:100%; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
-  </div>
-</section> 
 
 .btn{
 background:#ffb703;
 color:black;
 padding:15px 25px;
-text-decoration:none;
 border-radius:8px;
+text-decoration:none;
 font-weight:bold;
 }
 
@@ -103,9 +74,9 @@ margin:auto;
 
 .section-title{
 text-align:center;
-font-size:40px;
+font-size:38px;
 color:#0d5c2f;
-margin-bottom:40px;
+margin-bottom:30px;
 }
 
 .products{
@@ -133,7 +104,6 @@ text-align:center;
 }
 
 .card-content h3{
-margin-bottom:10px;
 color:#0d5c2f;
 }
 
@@ -143,11 +113,11 @@ text-align:center;
 padding:50px 20px;
 }
 
-.contact{
-background:#0d5c2f;
-color:white;
-text-align:center;
-padding:50px 20px;
+.review{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 footer{
@@ -155,102 +125,53 @@ background:black;
 color:white;
 text-align:center;
 padding:20px;
-}
-
-.order-btn{
-display:inline-block;
-margin-top:15px;
-background:#25D366;
-color:white;
-padding:12px 25px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+margin-top:40px;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-<img src="Logo.jpeg" alt="Muyes001 Enterprises Logo">
+
+<img src="logoflyer.jpeg" alt="Muyes001 Enterprises Logo">
 
 <h1>Muyes001 Enterprises</h1>
+
+<p>Quality Farm Produce Supplier</p>
 
 <nav>
 <a href="#products">Products</a>
 <a href="#payment">Payment</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>Quality Farm Produce</h1>
+
+<h1>Fresh Farm Produce Delivered Across Kenya</h1>
 
 <p>
 Rice, Beans, Maize, Milk and Tea Leaves Available.
-Countrywide Delivery from Nairobi.
+Countrywide Delivery.
 </p>
 
-<section class="section">
-
-<h2 class="section-title">Place Your Order</h2>
-
-<div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
-
-<input id="customerName" type="text" placeholder="Your Name"
-style="width:100%;padding:12px;margin-bottom:15px;">
-
-<input id="customerPhone" type="text" placeholder="Your Phone Number"
-style="width:100%;padding:12px;margin-bottom:15px;">
-
-<select id="product"
-style="width:100%;padding:12px;margin-bottom:15px;">
-<option>Pishori Rice</option>
-<option>Beans</option>
-<option>Maize</option>
-<option>Milk</option>
-<option>Tea Leaves</option>
-</select>
-
-<input id="quantity" type="number" placeholder="Quantity"
-style="width:100%;padding:12px;margin-bottom:15px;">
-
-<button onclick="sendOrder()"
-style="background:#25D366;color:white;border:none;padding:15px 25px;border-radius:8px;cursor:pointer;font-size:16px;">
-Send Order on WhatsApp
-</button>
-
-</div>
+<a class="btn" href="https://wa.me/254794542227">
+Order on WhatsApp
+</a>
 
 </section>
 
-<script>
-function sendOrder() {
+<section class="section">
 
-const name = document.getElementById('customerName').value;
-const phone = document.getElementById('customerPhone').value;
-const product = document.getElementById('product').value;
-const quantity = document.getElementById('quantity').value;
+<h2 class="section-title">Promotional Flyer</h2>
 
-const message =
-`NEW ORDER
+<div style="text-align:center;">
+<img src="logoflyer.jpeg" style="max-width:100%;border-radius:15px;">
+</div>
 
-Name: ${name}
-Phone: ${phone}
-Product: ${product}
-Quantity: ${quantity}
-
-Please confirm availability and delivery details.`;
-
-window.open(
-`https://wa.me/254794542227?text=${encodeURIComponent(message)}`,
-'_blank'
-);
-
-}
-</script>
-</a>
 </section>
 
 <section class="section" id="products">
@@ -279,7 +200,7 @@ window.open(
 <img src="Maize.jpeg">
 <div class="card-content">
 <h3>Maize</h3>
-<p>Available on Request</p>
+<p>Available</p>
 </div>
 </div>
 
@@ -287,7 +208,7 @@ window.open(
 <img src="Milk.jpeg">
 <div class="card-content">
 <h3>Milk</h3>
-<p>Fresh Supply Available</p>
+<p>Available</p>
 </div>
 </div>
 
@@ -295,9 +216,37 @@ window.open(
 <img src="Tea Leaves.jpeg">
 <div class="card-content">
 <h3>Tea Leaves</h3>
-<p>Quality Tea Products</p>
+<p>Available</p>
 </div>
 </div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Place Your Order</h2>
+
+<div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:15px;">
+
+<input id="customerName" type="text" placeholder="Your Name" style="width:100%;padding:12px;margin-bottom:10px;">
+
+<input id="customerPhone" type="text" placeholder="Phone Number" style="width:100%;padding:12px;margin-bottom:10px;">
+
+<select id="product" style="width:100%;padding:12px;margin-bottom:10px;">
+<option>Pishori Rice</option>
+<option>Beans</option>
+<option>Maize</option>
+<option>Milk</option>
+<option>Tea Leaves</option>
+</select>
+
+<input id="quantity" type="number" placeholder="Quantity" style="width:100%;padding:12px;margin-bottom:10px;">
+
+<button onclick="sendOrder()" style="background:#25D366;color:white;border:none;padding:15px 20px;border-radius:8px;">
+Send Order on WhatsApp
+</button>
 
 </div>
 
@@ -308,119 +257,101 @@ window.open(
 <h2 class="section-title">M-Pesa Payment</h2>
 
 <p><strong>Paybill:</strong> 765244</p>
-<br>
 <p><strong>Account Number:</strong> 277352</p>
 
 </section>
 
-<section class="contact" id="contact">
-
-<h2>Contact Us</h2>
-
-<p>Phone: 0794542227</p>
-<p>Location: Nairobi, Kenya</p>
-<p>Countrywide Delivery Available</p>
-
-<a class="order-btn" href="https://wa.me/254794542227">
-Chat on WhatsApp
-</a>
-
-</section>
-
 <section class="section">
+
 <h2 class="section-title">Customer Reviews</h2>
 
 <div class="products">
 
-<div class="card">
-<div class="card-content">
+<div class="review">
 ⭐⭐⭐⭐⭐
-<p>Excellent quality rice and fast delivery.</p>
-<strong>- Nairobi Customer</strong>
-</div>
+<p>Excellent rice and fast delivery.</p>
 </div>
 
-<div class="card">
-<div class="card-content">
+<div class="review">
 ⭐⭐⭐⭐⭐
-<p>Fresh beans and very professional service.</p>
-<strong>- Kisumu Customer</strong>
-</div>
+<p>Quality beans and trusted service.</p>
 </div>
 
 </div>
-</section>
-
-  <section class="section">
-<h2 class="section-title">Delivery Services</h2>
-
-<p style="text-align:center;font-size:20px;">
-We deliver across Kenya. Orders are processed quickly and delivered to your preferred location.
-</p>
 
 </section>
 
- <section class="section">
+<section class="section">
 
 <h2 class="section-title">Follow Us</h2>
 
 <div style="text-align:center;">
 
-<a href="https://www.facebook.com/share/1EMPa2BRPV/"
-target="_blank"
-style="display:inline-block;margin:10px;padding:15px 25px;background:#1877F2;color:white;text-decoration:none;border-radius:8px;">
-Facebook
-</a>
-
-<a href="https://www.instagram.com/muyes.001"
-target="_blank"
-style="display:inline-block;margin:10px;padding:15px 25px;background:#E4405F;color:white;text-decoration:none;border-radius:8px;">
-Instagram
-</a>
-
-<a href="https://www.youtube.com/channel/UChi4qnBnYo6kxcL6I3gXYOw"
-target="_blank"
-style="display:inline-block;margin:10px;padding:15px 25px;background:#FF0000;color:white;text-decoration:none;border-radius:8px;">
-YouTube
-</a>
+<a href="https://www.facebook.com/share/1EMPa2BRPV/" target="_blank">Facebook</a> | <a href="https://www.instagram.com/muyes.001" target="_blank">Instagram</a> | <a href="https://www.youtube.com/channel/UChi4qnBnYo6kxcL6I3gXYOw" target="_blank">YouTube</a>
 
 </div>
 
 </section>
 
-  <section class="section">
-  <h2 class="section-title">Product Gallery</h2>
+<section class="section">
 
-  <div class="products">
+<h2 class="section-title">Find Us</h2>
 
-    <div class="card">
-      <img src="Rice.jpeg">
-    </div>
+<iframe
+src="https://maps.google.com/maps?q=Nairobi%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400"
+style="border:0;border-radius:15px;">
+</iframe>
 
-    <div class="card">
-      <img src="Beans.jpeg">
-    </div>
-
-    <div class="card">
-      <img src="Maize.jpeg">
-    </div>
-
-    <div class="card">
-      <img src="Milk.jpeg">
-    </div>
-
-    <div class="card">
-      <img src="Tea Leaves.jpeg">
-    </div>
-
-  </div>
 </section>
 
-  <img src="flyer.png" alt="Muyes001 Enterprises Flyer">
-  
+<section class="section" id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p style="text-align:center;">
+Phone: 0794542227<br>
+Location: Nairobi, Kenya<br>
+Countrywide Delivery Available
+</p>
+
+</section>
+
 <footer>
+
 © 2026 Muyes001 Enterprises. All Rights Reserved.
+
 </footer>
+
+<a href="https://wa.me/254794542227"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;">
+WhatsApp Us </a>
+
+<script>
+function sendOrder() {
+
+const name=document.getElementById('customerName').value;
+const phone=document.getElementById('customerPhone').value;
+const product=document.getElementById('product').value;
+const quantity=document.getElementById('quantity').value;
+
+const message=
+`NEW ORDER
+
+Name: ${name}
+Phone: ${phone}
+Product: ${product}
+Quantity: ${quantity}`;
+
+window.open(
+`https://wa.me/254794542227?text=${encodeURIComponent(message)}`,
+'_blank'
+);
+
+}
+</script>
 
 </body>
 </html>
+
