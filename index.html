@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -18,244 +17,128 @@ font-family:Arial,sans-serif;
 body{
 background:#f5f5f5;
 color:#222;
-line-height:1.6;
 }
 
 header{
-background:#0d5c2f;
+background:#0b6623;
 color:white;
 text-align:center;
 padding:20px;
 }
 
-header img{
-width:140px;
-border-radius:12px;
+.logo{
+width:150px;
+border-radius:10px;
 margin-bottom:10px;
-}
-<section>
-  <img src="Muyes001%20logo.png" alt="Muyes001 Enterprises Logo">
-</section>
-nav a{
-color:white;
-text-decoration:none;
-margin:0 10px;
-font-weight:bold;
 }
 
 .hero{
-background:#0d5c2f;
+background:#0b6623;
 color:white;
 text-align:center;
-padding:80px 20px;
+padding:60px 20px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 margin-bottom:15px;
 }
 
-.hero p{
-font-size:20px;
-margin-bottom:25px;
-}
-<section class="section">
- <img src="Muyes001%20flyer.png" style="max-width:100%;border-radius:15px;">
-</section>
 .btn{
-background:#ffb703;
+display:inline-block;
+background:#f4b400;
 color:black;
-padding:15px 25px;
-border-radius:8px;
+padding:12px 25px;
 text-decoration:none;
+border-radius:8px;
+margin-top:20px;
 font-weight:bold;
 }
 
 .section{
-padding:60px 20px;
+padding:40px 20px;
 max-width:1200px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
-font-size:38px;
-color:#0d5c2f;
 margin-bottom:30px;
+color:#0b6623;
+}
+
+.flyer{
+width:100%;
+max-width:700px;
+display:block;
+margin:auto;
+border-radius:15px;
 }
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
-  <section class="section">
 
-<h2 class="section-title">Shopping Cart</h2>
-
-<div id="cartItems" style="background:white;padding:20px;border-radius:15px;">
-No items added yet.
-</div>
-
-<h3 style="margin-top:20px;">
-Total: KSh <span id="cartTotal">0</span>
-</h3>
-
-<button onclick="checkoutWhatsApp()"
-style="background:#25D366;color:white;border:none;padding:15px 25px;border-radius:8px;cursor:pointer;">
-Checkout via WhatsApp
-</button>
-
-</section>
-  <button onclick="addToCart('Pishori Rice',200)">
-Add to Cart
-</button>
-  <button onclick="addToCart('Beans',180)">
-Add to Cart
-</button>
-  <button onclick="addToCart('Maize',200)">
-Add to Cart
-</button>
-  <button onclick="addToCart('Milk',80)">
-Add to Cart
-</button>
-  <button onclick="addToCart('Tea Leaves',150)">
-Add to Cart
-</button>
-<p>
-Pay via M-Pesa Paybill: <strong>765244</strong><br>
-Account Number: <strong>277352</strong>
-</p>
 .card{
 background:white;
+padding:15px;
 border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
 .card img{
 width:100%;
-height:250px;
+height:180px;
 object-fit:cover;
+border-radius:10px;
 }
 
-.card-content{
-padding:20px;
-text-align:center;
+.card button{
+background:#0b6623;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
 }
 
-.card-content h3{
-color:#0d5c2f;
-}
-
-.mpesa{
-background:#e8f5e9;
-text-align:center;
-padding:50px 20px;
-}
-
-.review{
+.cart{
 background:white;
 padding:20px;
 border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.social a{
+margin:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
 footer{
-background:black;
+background:#0b6623;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
+margin-top:30px;
 }
 </style>
 
 </head>
-<script>
 
-let cart = [];
-
-function addToCart(product, price){
-
-cart.push({
-product: product,
-price: price
-});
-
-renderCart();
-
-}
-
-function renderCart(){
-
-let html = "";
-let total = 0;
-
-cart.forEach(item => {
-
-html += `
-<p>${item.product} - KSh ${item.price}</p>
-`;
-
-total += item.price;
-
-});
-
-if(cart.length === 0){
-html = "No items added yet.";
-}
-
-document.getElementById("cartItems").innerHTML = html;
-document.getElementById("cartTotal").innerText = total;
-
-}
-
-function checkoutWhatsApp(){
-
-if(cart.length === 0){
-alert("Your cart is empty.");
-return;
-}
-
-let order = "NEW ORDER%0A%0A";
-
-let total = 0;
-
-cart.forEach(item => {
-order += `${item.product} - KSh ${item.price}%0A`;
-total += item.price;
-});
-
-order += `%0A TOTAL: KSh ${total}`;
-
-window.open(
-`https://wa.me/254794542227?text=${order}`,
-"_blank"
-);
-
-}
-
-</script>
 <body>
 
 <header>
-
-<img src="logoflyer.jpeg" alt="Muyes001 Enterprises Logo">
+<img src="Muyes001%20logo.png" class="logo" alt="Muyes001 Enterprises Logo">
 
 <h1>Muyes001 Enterprises</h1>
-
 <p>Quality Farm Produce Supplier</p>
-
-<nav>
-<a href="#products">Products</a>
-<a href="#payment">Payment</a>
-<a href="#contact">Contact</a>
-</nav>
-
 </header>
 
 <section class="hero">
-
 <h1>Fresh Farm Produce Delivered Across Kenya</h1>
 
 <p>
@@ -266,20 +149,19 @@ Countrywide Delivery.
 <a class="btn" href="https://wa.me/254794542227">
 Order on WhatsApp
 </a>
-
 </section>
 
 <section class="section">
 
 <h2 class="section-title">Promotional Flyer</h2>
 
-<div style="text-align:center;">
-<img src="logoflyer.jpeg" style="max-width:100%;border-radius:15px;">
-</div>
+<img src="Muyes001%20flyer.png"
+class="flyer"
+alt="Promotional Flyer">
 
 </section>
 
-<section class="section" id="products">
+<section class="section">
 
 <h2 class="section-title">Our Products</h2>
 
@@ -287,102 +169,77 @@ Order on WhatsApp
 
 <div class="card">
 <img src="Rice.jpeg">
-<div class="card-content">
 <h3>Pishori Rice</h3>
 <p>KSh 200 per KG</p>
-</div>
+<button onclick="addToCart('Pishori Rice',200)">
+Add to Cart
+</button>
 </div>
 
 <div class="card">
 <img src="Beans.jpeg">
-<div class="card-content">
 <h3>Beans</h3>
 <p>KSh 180 per KG</p>
-</div>
+<button onclick="addToCart('Beans',180)">
+Add to Cart
+</button>
 </div>
 
 <div class="card">
 <img src="Maize.jpeg">
-<div class="card-content">
 <h3>Maize</h3>
-<p>Available</p>
-</div>
+<p>Fresh Quality Maize</p>
+<button onclick="addToCart('Maize',100)">
+Add to Cart
+</button>
 </div>
 
 <div class="card">
 <img src="Milk.jpeg">
-<div class="card-content">
 <h3>Milk</h3>
-<p>Available</p>
-</div>
+<p>KSh 80 per litre</p>
+<button onclick="addToCart('Milk',80)">
+Add to Cart
+</button>
 </div>
 
 <div class="card">
 <img src="Tea Leaves.jpeg">
-<div class="card-content">
 <h3>Tea Leaves</h3>
-<p>Available</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Place Your Order</h2>
-
-<div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:15px;">
-
-<input id="customerName" type="text" placeholder="Your Name" style="width:100%;padding:12px;margin-bottom:10px;">
-
-<input id="customerPhone" type="text" placeholder="Phone Number" style="width:100%;padding:12px;margin-bottom:10px;">
-
-<select id="product" style="width:100%;padding:12px;margin-bottom:10px;">
-<option>Pishori Rice</option>
-<option>Beans</option>
-<option>Maize</option>
-<option>Milk</option>
-<option>Tea Leaves</option>
-</select>
-
-<input id="quantity" type="number" placeholder="Quantity" style="width:100%;padding:12px;margin-bottom:10px;">
-
-<button onclick="sendOrder()" style="background:#25D366;color:white;border:none;padding:15px 20px;border-radius:8px;">
-Send Order on WhatsApp
+<p>KSh 250 per KG</p>
+<button onclick="addToCart('Tea Leaves',150)">
+Add to Cart
 </button>
-
 </div>
 
-</section>
-
-<section class="mpesa" id="payment">
-
-<h2 class="section-title">M-Pesa Payment</h2>
-
-<p><strong>Paybill:</strong> 765244</p>
-<p><strong>Account Number:</strong> 277352</p>
-
+</div>
 </section>
 
 <section class="section">
 
-<h2 class="section-title">Customer Reviews</h2>
+<h2 class="section-title">Shopping Cart</h2>
 
-<div class="products">
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>Excellent rice and fast delivery.</p>
+<div id="cartItems" class="cart">
+No items added yet.
 </div>
 
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>Quality beans and trusted service.</p>
-</div>
+<h3 style="margin-top:20px;">
+Total: KSh <span id="cartTotal">0</span>
+</h3>
 
-</div>
+<br>
+
+<button onclick="checkoutWhatsApp()"
+style="background:#25D366;color:white;border:none;padding:15px 25px;border-radius:8px;cursor:pointer;">
+Checkout via WhatsApp </button>
+
+<br><br>
+
+<p>
+M-Pesa Paybill: <strong>765244</strong><br>
+Account Number: <strong>277352</strong><br>
+Business Phone: <strong>0794542227</strong>
+</p>
 
 </section>
 
@@ -390,9 +247,19 @@ Send Order on WhatsApp
 
 <h2 class="section-title">Follow Us</h2>
 
-<div style="text-align:center;">
+<div class="social" style="text-align:center;">
 
-<a href="https://www.facebook.com/share/1EMPa2BRPV/" target="_blank">Facebook</a> | <a href="https://www.instagram.com/muyes.001" target="_blank">Instagram</a> | <a href="https://www.youtube.com/channel/UChi4qnBnYo6kxcL6I3gXYOw" target="_blank">YouTube</a>
+<a href="https://www.facebook.com/share/1EMPa2BRPV/" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/muyes.001?igsh=N2tocHN5YWRnb3Nl" target="_blank">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/channel/UChi4qnBnYo6kxcL6I3gXYOw" target="_blank">
+YouTube
+</a>
 
 </div>
 
@@ -400,63 +267,86 @@ Send Order on WhatsApp
 
 <section class="section">
 
-<h2 class="section-title">Find Us</h2>
-
-<iframe
-src="https://maps.google.com/maps?q=Nairobi%20Kenya&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="400"
-style="border:0;border-radius:15px;">
-</iframe>
-
-</section>
-
-<section class="section" id="contact">
-
 <h2 class="section-title">Contact Us</h2>
 
 <p style="text-align:center;">
-Phone: 0794542227<br>
-Location: Nairobi, Kenya<br>
-Countrywide Delivery Available
+Muyes001 Enterprises<br>
+Nairobi, Kenya<br>
+Countrywide Delivery<br>
+Phone: 0794542227
 </p>
 
 </section>
 
 <footer>
-
 © 2026 Muyes001 Enterprises. All Rights Reserved.
-
 </footer>
 
-<a href="https://wa.me/254794542227"
-style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none;">
-WhatsApp Us </a>
-
 <script>
-function sendOrder() {
 
-const name=document.getElementById('customerName').value;
-const phone=document.getElementById('customerPhone').value;
-const product=document.getElementById('product').value;
-const quantity=document.getElementById('quantity').value;
+let cart=[];
 
-const message=
-`NEW ORDER
+function addToCart(product,price){
 
-Name: ${name}
-Phone: ${phone}
-Product: ${product}
-Quantity: ${quantity}`;
+cart.push({
+product:product,
+price:price
+});
+
+renderCart();
+
+}
+
+function renderCart(){
+
+let html="";
+let total=0;
+
+cart.forEach(item=>{
+
+html+=`<p>${item.product} - KSh ${item.price}</p>`;
+
+total+=item.price;
+
+});
+
+if(cart.length===0){
+html="No items added yet.";
+}
+
+document.getElementById("cartItems").innerHTML=html;
+document.getElementById("cartTotal").innerText=total;
+
+}
+
+function checkoutWhatsApp(){
+
+if(cart.length===0){
+alert("Your cart is empty.");
+return;
+}
+
+let order="NEW ORDER%0A%0A";
+let total=0;
+
+cart.forEach(item=>{
+
+order+=`${item.product} - KSh ${item.price}%0A`;
+
+total+=item.price;
+
+});
+
+order+=`%0ATOTAL: KSh ${total}`;
 
 window.open(
-`https://wa.me/254794542227?text=${encodeURIComponent(message)}`,
-'_blank'
+`https://wa.me/254794542227?text=${order}`,
+"_blank"
 );
 
 }
+
 </script>
 
 </body>
 </html>
-
